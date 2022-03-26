@@ -1,3 +1,5 @@
+![badge](https://img.shields.io/badge/license-apache-blue)
+
 # Challenge #12:  SQL-Challenge
 
  SQL Challenge 12: Employee Tracker 
