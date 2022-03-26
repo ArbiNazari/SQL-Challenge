@@ -4,7 +4,7 @@
 
   ## Table-of-Contents
   * [Description and Task](#description)
-  * [Requirements and Installing](#require)
+  * [Requirements and Installing](#Requirements)
   * [License](#license)   
   * [Contributing](#contributing)
   * [Questions](#questions)
@@ -44,8 +44,8 @@
    - User is then prompted to select an employee to update and their new role and this information is updated in the database.
 
 
-   ## [Requirements and Installing](#table-of-contents)
-   
+   ## [Requirements](#table-of-contents)
+
 
    # Database Application Structuring:
 
