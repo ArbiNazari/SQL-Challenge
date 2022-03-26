@@ -44,7 +44,8 @@
    - User is then prompted to select an employee to update and their new role and this information is updated in the database.
 
 
-   ## [Require](#table-of-contents)
+   ## [Requirements and Installing](#table-of-contents)
+   
 
    # Database Application Structuring:
 
