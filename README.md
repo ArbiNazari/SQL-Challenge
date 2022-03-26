@@ -4,6 +4,7 @@
 
   ## Table-of-Contents
   * [Description and Task](#description)
+  * [Application Requirements](#require)
   * [License](#license)   
   * [Contributing](#contributing)
   * [Questions](#questions)
@@ -43,3 +44,60 @@
    - User is then prompted to select an employee to update and their new role and this information is updated in the database.
 
 
+   ## [Application Requirements](#require)
+
+   # Database Application Structuring:
+
+
+   # Schema Tabling:
+
+    As the image illustrates, your schema should contain the following three tables:
+
+    department
+
+        id: INT PRIMARY KEY
+
+        name: VARCHAR(30) to hold department name
+
+    role
+
+        id: INT PRIMARY KEY
+
+        title: VARCHAR(30) to hold role title
+
+        salary: DECIMAL to hold role salary
+
+        department_id: INT to hold reference to department role belongs to
+
+    employee
+
+        id: INT PRIMARY KEY
+
+        first_name: VARCHAR(30) to hold employee first name
+
+        last_name: VARCHAR(30) to hold employee last name
+
+        role_id: INT to hold reference to employee role
+
+        manager_id: INT to hold reference to another employee that is the manager of the current employee (null if the employee has no manager)
+
+
+After installing the required applications (Node.js) - run: node index.js
+ 
+   Video Guide - [video guide](https://www.awesomescreenshot.com/video/7497518?key=39b1b50897de8d6ae47e34774bafb4f6)
+  
+  ## [License](#table-of-contents)
+  The application is covered under the following license:
+  
+  [apache](https://choosealicense.com/licenses/apache)
+    
+    
+  ## [Contributing](#table-of-contents)
+  
+    Feel free to contact me if there are any issues or ideas to implement.
+    
+  ## [Questions](#table-of-contents)
+  Contact Information Below:
+  [GitHub](https://github.com/arbinazari)
+
+  [Email: arbinazari@hotmail.com](mailto:arbinazari@hotmail.com)
