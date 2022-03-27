@@ -26,7 +26,7 @@ department_id INT NOT NULL,
 
 PRIMARY KEY (id)
 
-);
+);CRE
 
 CREATE TABLE employee (
 

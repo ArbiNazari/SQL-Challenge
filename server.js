@@ -5,14 +5,8 @@ const db = require(".");
 
 const connection = mysql.createConnection({
   host: "localhost",
-
-  // Your port; if not 3306
   port: 3306,
-
-  // Your username
   user: "root",
-
-  // Your password
   password: '',
   database: "employee_db"
 });
@@ -22,22 +16,21 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 
   startScreen();
-  //  connection.end();//
+
 });
 
-//What the user will first see once logged into node
 function startScreen() {
   inquirer
     .prompt({
       type: "list",
       choices: [
-        "Add department",
-        "Add role",
-        "Add employee",
-        "View departments",
-        "View roles",
-        "View employees",
-        "Update employee role",
+        "Add A Department",
+        "Add A Role",
+        "Add An Employee",
+        "View Additional Departments",
+        "View Roles",
+        "View Employees",
+        "Update Employee Role",
         "Quit"
       ],
       message: "What would you like to do?",
@@ -74,9 +67,6 @@ function startScreen() {
     });
 }
 
-
-//All of the corresponding functions found below
-
 function addDepartment() {
 
 
@@ -88,8 +78,6 @@ function addDepartment() {
 
     }).then(function(answer){
 
-
-
         connection.query("INSERT INTO department (name) VALUES (?)", [answer.deptName] , function(err, res) {
             if (err) throw err;
             console.table(res)
@@ -97,7 +85,6 @@ function addDepartment() {
     })
     })
 }
-
 
 function addRole() {
   inquirer
@@ -164,8 +151,6 @@ function addEmployee() {
     });
 }
 
-//Since we're using inquirer, we can pass the query into the method as an array
-
 function updateEmployee() {
   inquirer
     .prompt([
@@ -182,9 +167,6 @@ function updateEmployee() {
       }
     ])
     .then(function(answer) {
-      // let query = `INSERT INTO department (name) VALUES ("${answer.deptName}")`
-      //let query = `'UPDATE employee SET role_id=${answer.updateRole} WHERE first_name= ${answer.eeUpdate}`;
-      //console.log(query);
 
       connection.query('UPDATE employee SET role_id=? WHERE first_name= ?',[answer.updateRole, answer.eeUpdate],function(err, res) {
         if (err) throw err;
@@ -195,36 +177,31 @@ function updateEmployee() {
 }
 
 function viewDepartment() {
-  // select from the db
   let query = "SELECT * FROM department";
   connection.query(query, function(err, res) {
     if (err) throw err;
     console.table(res);
     startScreen();
   });
-  // show the result to the user (console.table)
 }
 
 function viewRoles() {
-  // select from the db
   let query = "SELECT * FROM role";
   connection.query(query, function(err, res) {
     if (err) throw err;
     console.table(res);
     startScreen();
   });
-  // show the result to the user (console.table)
 }
 
 function viewEmployees() {
-  // select from the db
   let query = "SELECT * FROM employee";
   connection.query(query, function(err, res) {
     if (err) throw err;
     console.table(res);
     startScreen();
   });
-  // show the result to the user (console.table)
+
 }
 
 function quit() {
