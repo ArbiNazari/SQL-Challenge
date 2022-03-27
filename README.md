@@ -51,6 +51,7 @@
 
    # Database Application Structuring:
 
+<img width="948" alt="12-sql-homework-demo-01" src="https://user-images.githubusercontent.com/95839411/160297289-228054c8-14f5-41d9-9549-e9f45a91a2bf.png">
 
    # Schema Tabling:
 
